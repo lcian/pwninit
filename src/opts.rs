@@ -40,6 +40,11 @@ pub struct Opts {
     #[structopt(long)]
     #[setters(generate)]
     pub bin: Option<PathBuf>,
+    
+    /// nc command for remote
+    #[setters(generate)]
+    #[structopt(default_value = "")]
+    pub nc: String,
 
     /// Challenge libc
     #[structopt(long)]

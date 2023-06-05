@@ -82,6 +82,7 @@ fn make_stub(opts: &Opts) -> Result<String> {
         "bindings".to_string() => make_bindings(opts),
         "proc_args".to_string() => make_proc_args(opts),
         "bin_name".to_string() => opts.template_bin_name.clone(),
+        "nc".to_string() => opts.nc.clone()
         },
     )
     .context(FmtSnafu)
